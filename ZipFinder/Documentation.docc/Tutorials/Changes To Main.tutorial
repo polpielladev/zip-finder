@@ -1,0 +1,131 @@
+@Tutorial(time: 20) {
+    @Intro(title: "Workflow: Changes to Main workflow") {
+        Build and test an application every single time that a commit is pushed to the main branch of the repository or every time a commit is pushed to a Pull Request that targets the main branch.
+        
+        This is a very common protection rule that most teams use for their apps and that prevents breaking commits from landing into the main development branch without going unnoticed.
+    }
+    
+    @Section(title: "Creating the workflow in Xcode") {
+        @ContentAndMedia {
+            How to create and set up a workflow that runs on every push to main or to a PR that targets main directly from Xcode. The workflow will run all tests and will also notify users of any failures on a Slack channel. 
+            
+            @Image(source: "set-up-xcode-cloud-intro", alt: "")
+        }
+        
+        @Steps {
+            @Step {
+                First, start by navigating to the Report Navigator, tap on the Cloud tab, right-click on the product you want to add a workflow to and then click on 'Manage Workflows'.
+                
+                @Image(source: "manage-workflows.png", alt: "")
+            }
+            
+            @Step {
+                In the 'Manage Workflows' screen, tap on the '+' button at the bottom of the screen and select the product you are adding a new workflow to.
+                
+                @Image(source: "new-workflow.png", alt: "")
+            }
+            
+            @Step {
+                Fill in information about your workflow such as name, description and the Xcode Project you'd like to use.
+                
+                @Image(source: "main-general.png", alt: "")
+            }
+            
+            @Step {
+                Select the 'Environment' tab from the left hand panel. In this section, you'll be able to select the Xcode and macOS version for the runners and add any environment variables your workflows will need.
+                
+                @Image(source: "main-environment.png", alt: "")
+            }
+            
+            @Step {
+                Open the dropdown of the Xcode version and select the option to create a new custom alias. You could select any version you'd like, but creating a custom alias is good practice so that you are able to change all your Xcode versions for all workflows at once by just modifying the alias.
+                
+                @Image(source: "main-xcode-picker.png", alt: "")
+            }
+            
+            @Step {
+                Write the name of your alias, select the version of Xcode you want to use and whether it is editable by users that aren't admins or account holders.
+                
+                @Image(source: "main-xcode-alias.png", alt: "")
+            }
+            
+            @Step {
+                Open the dropdown of the macOS version and select the option to create a new custom alias. You could select any version you'd like, but creating a custom alias is good practice so that you are able to change all your macOS versions for all workflows at once by just modifying the alias.
+                
+                @Image(source: "main-macos-picker.png", alt: "")
+            }
+            
+            @Step {
+                Write the name of your alias, select the version of macOS you want to use and whether it is editable by users that aren't admins or account holders.
+                
+                @Image(source: "main-macos-alias.png", alt: "")
+            }
+            
+            @Step {
+                Update the selected Xcode and macOS versions to your new alias.
+                
+                @Image(source: "main-environment-with-aliases.png", alt: "")
+            }
+            
+            @Step {
+                Select the existing branch changes action from the side panel. The action should already be configured by default to be triggered only on the main branch.
+                
+                @Image(source: "main-branch-changes.png", alt: "")
+            }
+            
+            @Step {
+                Click on the '+' button next to the 'Actions' section and select the Pull Request Changes action from the list
+                
+                @Image(source: "main-branch-changes-add-pr.png", alt: "")
+            }
+            
+            @Step {
+                Edit the 'Target Branch' to be 'main'
+                
+                @Image(source: "main-branch-pr-changes.png", alt: "")
+            }
+            
+            @Step {
+                Edit the 'Target Branch' to be 'main'
+                
+                @Image(source: "main-branch-pr-changes.png", alt: "")
+            }
+            
+            @Step {
+                Select the Test action, change it to use the Test Plan in your project and set up whichever devices you would like to use for testing.
+                
+                @Image(source: "main-test.png", alt: "")
+            }
+            
+            @Step {
+                Select the Test action, change it to use the Test Plan in your project and set up whichever devices you would like to use for testing.
+                
+                @Image(source: "main-test.png", alt: "")
+            }
+            
+            @Step {
+                Click on the '+' button next to the Post Actions tab and select 'Notify' from the list.
+                
+                @Image(source: "main-post-action-add.png", alt: "")
+            }
+            
+            @Step {
+                Click on the '+' on the Slack channel list if you would like to add one.
+                
+                @Image(source: "main-notify.png", alt: "")
+            }
+            
+            @Step {
+                Go through the Slack OAuth flow to set up your workspace with Xcode Cloud and, once you have done so, select the channel you would like to notify from the list.
+                
+                @Image(source: "main-notify-slack.png", alt: "")
+            }
+            
+            @Step {
+                Click on the '+' on the Email list if you would like to add one and just type in the email you would like to send notifications to.
+                
+                @Image(source: "main-notify-email.png", alt: "")
+            }
+        }
+    }
+}

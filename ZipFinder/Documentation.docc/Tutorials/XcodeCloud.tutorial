@@ -1,0 +1,15 @@
+@Tutorials(name: "XcodeCloud") {
+    @Intro(title: "Ship your apps faster with Xcode Cloud") {
+        Archive, upload and distribute your apps faster with Xcode Cloud.
+    }
+    
+    @Chapter(name: "Ship your apps faster with Xcode Cloud") {
+        Learn how to set up Xcode Cloud on your project from scratch and create your first workflow
+        
+        @Image(source: "set-up-xcode-cloud-intro", alt: "")
+        
+        @TutorialReference(tutorial: "doc:Setting-Up-Xcode-Cloud")
+        @TutorialReference(tutorial: "doc:Changes-To-Main")
+    }
+
+}

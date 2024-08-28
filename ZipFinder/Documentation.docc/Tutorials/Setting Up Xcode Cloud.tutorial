@@ -1,0 +1,87 @@
+@Tutorial(time: 10) {
+    @Intro(title: "Ship your apps faster with Xcode Cloud") {
+        This tutorial guides you through setting up the ZipFinder with Xcode Cloud and will guide you through the whole onboarding process to get you set up and ready to start automating your build distribution process!
+    }
+    
+    @Section(title: "Setting up Xcode Cloud") {
+        @ContentAndMedia {
+            Set up Xcode Cloud, grant access to the repository in your Code Hosting Platform, create an app in App Store Connect and create the first default workflow.
+            
+            @Image(source: "set-up-xcode-cloud-intro", alt: "")
+        }
+        
+        @Steps {
+            @Step {
+                First, start by navigating to the Report Navigator, tap on the Cloud tab and then click on the Get Started button.
+                
+                @Image(source: "get-started.png", alt: "")
+            }
+            
+            @Step {
+                Select the product you would like to ship from the list of available products in the project.
+                
+                @Image(source: "select-product.png", alt: "")
+            }
+            
+            @Step {
+                Create and edit a default workflow. Xcode Cloud always needs to have at least 1 workflow at all times, as part of creating the project set up onboarding, you will need to create a workflow.
+                
+                @Image(source: "create-workflow.png", alt: "")
+            }
+            
+            @Step {
+                Click the 'Grant Access' button to open a GitHub OAuth flow. This is necessary for Xcode Cloud to be able to listen to your repository's events and read the code.
+                
+                @Image(source: "grant-access.png", alt: "")
+            }
+            
+            @Step {
+                Once the OAuth flow starts on the browser, click the 'Complete Step 2 in GitHub' button.
+                
+                @Image(source: "connect-xcode-cloud.png", alt: "")
+            }
+            
+            @Step {
+                Continue the OAuth flow on your browser by installing the Xcode Cloud application as prompted.
+                
+                @Image(source: "install-xcode-cloud.png", alt: "")
+            }
+            
+            @Step {
+                Finally, add the repository where your project lives to the list of repositories available to Xcode Cloud and click 'Save'.
+                
+                @Image(source: "repository-access.png", alt: "")
+            }
+            
+            @Step {
+                Wait until GitHub redirects you to App Store Connect and then click on 'Continue in Xcode'.
+                
+                @Image(source: "continue-in-xcode.png", alt: "")
+            }
+            
+            @Step {
+                Once you are redirected to Xcode, the access to your source code on GitHub should be granted. If this is the case, press 'Complete'. Otherwise, you will have to press 'Grant access' again and re-do the whole OAuth flow.
+                
+                @Image(source: "granted-access.png", alt: "")
+            }
+            
+            @Step {
+                If you don't have an app associated with the product you are setting Xcode Cloud up for, you will be asked to create on directly from Xcode. Check that all fields are correct, and click on 'Complete'.
+                
+                @Image(source: "complete.png", alt: "")
+            }
+            
+            @Step {
+                There is a high chance that, if you are following this tutorial and setting up an app with the name `ZipFinder`, you will be prompted with the following message. The reason is that the app name needs to be unique.
+                
+                @Image(source: "could-not-create.png", alt: "")
+            }
+            
+            @Step {
+                If you'd like to get past this issue for testing purposes, head over to the settings section and change the Product Name setting to something unique.
+                
+                @Image(source: "change-product-name.png", alt: "")
+            }
+        }
+    }
+}
