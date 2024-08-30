@@ -32,7 +32,75 @@
             @Step {
                 Select the 'Environment' tab from the left hand panel. In this section, you'll be able to select the Xcode and macOS version for the runners and add any environment variables your workflows will need.
                 
-                @Image(source: "main-environment.png", alt: "")
+                Select the alias you created in a previous workflow.
+                
+                @Image(source: "nightly-environment.png", alt: "")
+            }
+            
+            @Step {
+                Select the existing 'Branch Chages' start condition, which is created by default by Xcode and delete it.
+                
+                @Image(source: "nightly-branch-changes-delete.png", alt: "")
+            }
+            
+            @Step {
+                Add a new 'Schedule' start condition
+                
+                @Image(source: "nightly-start-conditions-new.png", alt: "")
+            }
+            
+            @Step {
+                Set the desired branch, frequency and time for the new 'Schedule' start condition.
+                
+                @Image(source: "nightly-schedule.png", alt: "")
+            }
+            
+            @Step {
+                Add an 'Analyze' action.
+                
+                @Image(source: "nightly-actions-add-analyze.png", alt: "")
+            }
+            
+            @Step {
+                Set up the analyze action with the platform, scheme and devices to analyze your app on. Analyze actions can help you verify that your code is free from memory leaks and other issues and, as it takes a while to run, it is a great candidate for scheduled builds that don't run too often.
+                
+                @Image(source: "nightly-analyze.png", alt: "")
+            }
+            
+            @Step {
+                Add an 'Analyze' action.
+                
+                @Image(source: "nightly-actions-add-test.png", alt: "")
+            }
+            
+            @Step {
+                Set up the test action with the platform, scheme and devices to test your app on.
+                
+                @Image(source: "nightly-tests.png", alt: "")
+            }
+            
+            @Step {
+                Add an 'Archive' action.
+                
+                @Image(source: "nightly-actions-add-archive.png", alt: "")
+            }
+            
+            @Step {
+                Generate an artifact with the Archive action and select the option to prepare it for internal distribution.
+                
+                @Image(source: "nightly-archive.png", alt: "")
+            }
+            
+            @Step {
+                Add a 'TestFlight Internal Testing' post-action
+                
+                @Image(source: "nightly-post-actions-add.png", alt: "")
+            }
+            
+            @Step {
+                Select the artifact from the previous step and a group to distribute it to.
+                
+                @Image(source: "nightly-internal-testing.png", alt: "")
             }
         }
     }
