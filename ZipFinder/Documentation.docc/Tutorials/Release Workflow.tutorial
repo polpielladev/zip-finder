@@ -1,0 +1,179 @@
+@Tutorial(time: 20) {
+    @Intro(title: "Workflow: Distributing the app") {
+        Archive and distribute the app for external testing whenever a commit is pushed to a branch with the pattern `release/{platform}/{version}`. The workflow should automatically bump the version of the app based on the branch name, auto-translate the content and then submitting for external testing. 
+    }
+    
+    @Section(title: "Creating the `bump_version` lane in fastlane") {
+        @ContentAndMedia {
+            How to build a fastlane script that pulls out the platform and version information from the current branch, updates the Xcode project's `MARKETING_VERSION` field and pushes the new changes to the branch.
+            
+            @Image(source: "set-up-xcode-cloud-intro", alt: "")
+        }
+        
+        @Steps {
+            @Step {
+                Create a new bundle at the root of the repository
+                
+                @Code(name: "Terminal.sh", file: set-up-env-01.sh)
+            }
+            
+            @Step {
+                Add the `fastlane` and `xcodeproj` Ruby gems as dependencies
+                
+                @Code(name: "Terminal.sh", file: set-up-env-02.sh)
+            }
+            
+            @Step {
+                Initialise a new fastlane project locally
+                
+                @Code(name: "Terminal.sh", file: set-up-env-03.sh)
+            }
+            
+            @Step {
+                Add the `git_status` plugin to check what the git diff is on the CI runner.
+                
+                @Code(name: "Terminal.sh", file: set-up-env-04.sh)
+            }
+            
+            @Step {
+                Remove all contents of your `Fastfile.rb` file and import the `xcodeproj` gem at to the top.
+                
+                @Code(name: "Fastfile.rb", file: Fastfile-01.rb)
+            }
+            
+            @Step {
+                Define a method that will contain the logic to update the `MARKETING_VERSION` based on teh platform.
+                
+                @Code(name: "Fastfile.rb", file: Fastfile-02.rb)
+            }
+            
+            @Step {
+                Open the project using the `xcodeproj` gem.
+                
+                @Code(name: "Fastfile.rb", file: Fastfile-03.rb)
+            }
+            
+            @Step {
+                Select the iOS targets.
+                
+                @Code(name: "Fastfile.rb", file: Fastfile-04.rb)
+            }
+            
+            @Step {
+                Update the `MARKETING_VERSION` for all targets.
+                
+                @Code(name: "Fastfile.rb", file: Fastfile-05.rb)
+            }
+            
+            @Step {
+                Save the modified project file.
+                
+                @Code(name: "Fastfile.rb", file: Fastfile-06.rb)
+            }
+            
+            @Step {
+                Create a lane to update the version based on the branch name.
+                
+                @Code(name: "Fastfile.rb", file: Fastfile-07.rb)
+            }
+            
+            @Step {
+                Get the branch name from the `CI_BRANCH` environment variable provided by Xcode Cloud.
+                
+                @Code(name: "Fastfile.rb", file: Fastfile-08.rb)
+            }
+            
+            @Step {
+                Pull out the right components from the branch name and update the Xcode project files with the method we created earlier.
+                
+                @Code(name: "Fastfile.rb", file: Fastfile-09.rb)
+            }
+            
+            @Step {
+                If the version has changed push the changes to `.xcodeproj` to the branch.
+                
+                @Code(name: "Fastfile.rb", file: Fastfile-10.rb)
+            }
+        }
+    }
+    
+    @Section(title: "Running the Fastlane lane at the right times") {
+        @ContentAndMedia {
+            How to use Xcode Cloud's `ci_scripts` to install all bundle dependencies and run the fastlane lane after the repository is cloned. 
+            
+            @Image(source: "set-up-xcode-cloud-intro", alt: "")
+        }
+        
+        @Steps {
+            @Step {
+                First, create a `ci_scripts` directory at the root of the repository. Xcode Cloud looks for files with specific names in this directory to run scripts at different times during the workflow.
+                
+                @Code(name: "Terminal.sh", file: ci-post-clone-create-01.sh)
+            }
+            
+            @Step {
+                Create a file called `ci_post_clone.sh`. The name must be exactly this so that Xcode Cloud can find and knows that it has to run it directly after cloning the repository.
+                
+                @Code(name: "Terminal.sh", file: ci-post-clone-create-02.sh)
+            }
+            
+            @Step {
+                Make the file executable so that Xcode Cloud can run it.
+                
+                @Code(name: "Terminal.sh", file: ci-post-clone-create-03.sh)
+            }
+            
+            @Step {
+                Write a shell shebang in the `ci_post_clone.sh` script and then move one directory up. By default, Xcode Cloud runs all `ci_scripts` from inside the directory, so we must move up one to be at the root.
+                
+                @Code(name: "ci_post_clone.sh", file: ci-post-clone-01.sh)
+            }
+            
+            @Step {
+                Set up the Bundle Ruby environment for the CI runner temporarily.
+                
+                @Code(name: "ci_post_clone.sh", file: ci-post-clone-02.sh)
+            }
+            
+            @Step {
+                Install all of the bundle dependencies.
+                
+                @Code(name: "ci_post_clone.sh", file: ci-post-clone-03.sh)
+            }
+            
+            @Step {
+                Use Xcode Cloud's `CI_WORKFLOW` environment variable to determine the name of the workflow and, only if the name is `Release iOS`, then run the fastlane lane. It is very important that you do this as the `ci_scripts` will run for every single workflow that you have.
+                
+                @Code(name: "ci_post_clone.sh", file: ci-post-clone-04.sh)
+            }
+        }
+    }
+    
+    @Section(title: "Creating the Release Workflow") {
+        @ContentAndMedia {
+            Creating an Xcode Cloud workflow that gets triggered whenever a new commit is pushed to a branch with the `release/{platform}/{version}` format and distributes to App Store Connect users for External Testing
+            
+            @Image(source: "set-up-xcode-cloud-intro", alt: "")
+        }
+        
+        @Steps {
+            @Step {
+                
+            }
+        }
+    }
+    
+    @Section(title: "BONUS - Adding What's New content") {
+        @ContentAndMedia {
+            Creating an Xcode Cloud workflow that gets triggered whenever a new commit is pushed to a branch with the `release/{platform}/{version}` format and distributes to App Store Connect users for External Testing
+            
+            @Image(source: "set-up-xcode-cloud-intro", alt: "")
+        }
+        
+        @Steps {
+            @Step {
+
+            }
+        }
+    }
+}

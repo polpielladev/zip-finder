@@ -1,5 +1,5 @@
 @Tutorial(time: 10) {
-    @Intro(title: "Ship your apps faster with Xcode Cloud") {
+    @Intro(title: "How to Set Up Xcode Cloud") {
         This tutorial guides you through setting up the ZipFinder with Xcode Cloud and will guide you through the whole onboarding process to get you set up and ready to start automating your build distribution process!
     }
     

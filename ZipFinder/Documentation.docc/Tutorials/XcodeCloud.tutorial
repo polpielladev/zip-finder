@@ -10,6 +10,7 @@
         
         @TutorialReference(tutorial: "doc:Setting-Up-Xcode-Cloud")
         @TutorialReference(tutorial: "doc:Changes-To-Main")
+        @TutorialReference(tutorial: "doc:Nightly-Build")
+        @TutorialReference(tutorial: "doc:Release-Workflow")
     }
-
 }

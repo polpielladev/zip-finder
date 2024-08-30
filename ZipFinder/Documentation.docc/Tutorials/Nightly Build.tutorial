@@ -1,0 +1,39 @@
+@Tutorial(time: 20) {
+    @Intro(title: "Workflow: Nightly Build") {
+        Archive, test, analyze and submit your app for internal testing at midnight every night from the main branch.
+    }
+    
+    @Section(title: "Creating the workflow") {
+        @ContentAndMedia {
+            How to create and set up a workflow that runs at midnight every night from the main branch directly from Xcode. The workflow will archive the app, run all tests, analyze and submit the archive for internal testing. 
+            
+            @Image(source: "set-up-xcode-cloud-intro", alt: "")
+        }
+        
+        @Steps {
+            @Step {
+                First, start by navigating to the Report Navigator, tap on the Cloud tab, right-click on the product you want to add a workflow to and then click on 'Manage Workflows'.
+                
+                @Image(source: "manage-workflows.png", alt: "")
+            }
+            
+            @Step {
+                In the 'Manage Workflows' screen, tap on the '+' button at the bottom of the screen and select the product you are adding a new workflow to.
+                
+                @Image(source: "new-workflow.png", alt: "")
+            }
+            
+            @Step {
+                Fill in information about your workflow such as name, description and the Xcode Project you'd like to use.
+                
+                @Image(source: "nightly-general.png", alt: "")
+            }
+            
+            @Step {
+                Select the 'Environment' tab from the left hand panel. In this section, you'll be able to select the Xcode and macOS version for the runners and add any environment variables your workflows will need.
+                
+                @Image(source: "main-environment.png", alt: "")
+            }
+        }
+    }
+}

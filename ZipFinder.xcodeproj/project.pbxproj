@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		8D848D952C7F4A3D00E679BC /* ZipFinderPolPiellaDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZipFinderPolPiellaDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D848D952C7F4A3D00E679BC /* ZipFinder: Zip Code Lookup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZipFinder: Zip Code Lookup.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -40,7 +40,7 @@
 		8D848D962C7F4A3D00E679BC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D848D952C7F4A3D00E679BC /* ZipFinderPolPiellaDev.app */,
+				8D848D952C7F4A3D00E679BC /* ZipFinder: Zip Code Lookup.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,7 +67,7 @@
 			packageProductDependencies = (
 			);
 			productName = ZipFinder;
-			productReference = 8D848D952C7F4A3D00E679BC /* ZipFinderPolPiellaDev.app */;
+			productReference = 8D848D952C7F4A3D00E679BC /* ZipFinder: Zip Code Lookup.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -266,7 +266,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.polpiella.ZipFinder;
-				PRODUCT_NAME = "$(TARGET_NAME)PolPiellaDev";
+				PRODUCT_NAME = "$(TARGET_NAME): Zip Code Lookup";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -295,7 +295,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.polpiella.ZipFinder;
-				PRODUCT_NAME = "$(TARGET_NAME)PolPiellaDev";
+				PRODUCT_NAME = "$(TARGET_NAME): Zip Code Lookup";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
