@@ -82,7 +82,7 @@
 				};
 			};
 			buildConfigurationList = 8D848D902C7F4A3D00E679BC /* Build configuration list for PBXProject "ZipFinder" */;
-			compatibilityVersion = "Xcode 15.0";
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
