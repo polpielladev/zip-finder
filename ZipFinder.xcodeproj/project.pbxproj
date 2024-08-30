@@ -3,16 +3,25 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 63;
 	objects = {
+
+/* Begin PBXBuildFile section */
+		8DB766912C81DB7300118EA7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DB7668A2C81DB7300118EA7 /* Preview Assets.xcassets */; };
+		8DB766922C81DB7300118EA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DB7668C2C81DB7300118EA7 /* Assets.xcassets */; };
+		8DB766932C81DB7300118EA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB7668D2C81DB7300118EA7 /* ContentView.swift */; };
+		8DB766942C81DB7300118EA7 /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 8DB7668E2C81DB7300118EA7 /* Documentation.docc */; };
+		8DB766952C81DB7300118EA7 /* ZipFinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB7668F2C81DB7300118EA7 /* ZipFinderApp.swift */; };
+/* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8D848D952C7F4A3D00E679BC /* ZipFinder: Zip Code Lookup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZipFinder: Zip Code Lookup.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DB7668A2C81DB7300118EA7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8DB7668C2C81DB7300118EA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8DB7668D2C81DB7300118EA7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8DB7668E2C81DB7300118EA7 /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
+		8DB7668F2C81DB7300118EA7 /* ZipFinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipFinderApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		8D848D972C7F4A3D00E679BC /* ZipFinder */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ZipFinder; sourceTree = "<group>"; };
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		8D848D922C7F4A3D00E679BC /* Frameworks */ = {
@@ -28,7 +37,7 @@
 		8D848D8C2C7F4A3D00E679BC = {
 			isa = PBXGroup;
 			children = (
-				8D848D972C7F4A3D00E679BC /* ZipFinder */,
+				8DB766902C81DB7300118EA7 /* ZipFinder */,
 				8D848D962C7F4A3D00E679BC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -39,6 +48,26 @@
 				8D848D952C7F4A3D00E679BC /* ZipFinder: Zip Code Lookup.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8DB7668B2C81DB7300118EA7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8DB7668A2C81DB7300118EA7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8DB766902C81DB7300118EA7 /* ZipFinder */ = {
+			isa = PBXGroup;
+			children = (
+				8DB7668B2C81DB7300118EA7 /* Preview Content */,
+				8DB7668C2C81DB7300118EA7 /* Assets.xcassets */,
+				8DB7668D2C81DB7300118EA7 /* ContentView.swift */,
+				8DB7668E2C81DB7300118EA7 /* Documentation.docc */,
+				8DB7668F2C81DB7300118EA7 /* ZipFinderApp.swift */,
+			);
+			path = ZipFinder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,9 +84,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				8D848D972C7F4A3D00E679BC /* ZipFinder */,
 			);
 			name = ZipFinder;
 			packageProductDependencies = (
@@ -105,6 +131,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DB766912C81DB7300118EA7 /* Preview Assets.xcassets in Resources */,
+				8DB766922C81DB7300118EA7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DB766932C81DB7300118EA7 /* ContentView.swift in Sources */,
+				8DB766942C81DB7300118EA7 /* Documentation.docc in Sources */,
+				8DB766952C81DB7300118EA7 /* ZipFinderApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
