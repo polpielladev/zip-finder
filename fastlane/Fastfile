@@ -35,9 +35,6 @@ lane :update_version_number_if_needed do
   if git_status(path: "ZipFinder.xcodeproj/project.pbxproj").empty?
     puts "🚀 Nothing to commit, pushing the same version again!"
   else
-    sh("git fetch origin #{ENV["CI_BRANCH"]}:#{ENV["CI_BRANCH"]}")
-    sh("git checkout #{ENV["CI_BRANCH"]}")
-
     echo version_number >> ".project-version"
 
     git_commit(path: ["ZipFinder.xcodeproj/project.pbxproj", ".project-version"], message: "[🚀 release #{platform}] Updating version to: #{version_number}")
