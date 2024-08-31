@@ -256,6 +256,10 @@
                 
                 @Code(name: "Terminal.sh", file: whats-new-03.sh)
             }
+            
+            @Step {
+                That's it! Next time you run the release workflow, the release notes will be uploaded.
+            }
         }
     }
 }
