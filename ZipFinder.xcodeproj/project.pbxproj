@@ -26,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D1E3DDD2C83C868006579C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D646F402C83943C00B39BA4 /* ZipFinder.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = ZipFinder.xctestplan; sourceTree = "<group>"; };
 		8D646F4D2C8394B800B39BA4 /* ZipFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZipFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D646F562C8394BD00B39BA4 /* ZipFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipFinderTests.swift; sourceTree = "<group>"; };
@@ -93,6 +94,7 @@
 		8DB766902C81DB7300118EA7 /* ZipFinder */ = {
 			isa = PBXGroup;
 			children = (
+				8D1E3DDD2C83C868006579C0 /* Info.plist */,
 				8DB7668B2C81DB7300118EA7 /* Preview Content */,
 				8DB7668C2C81DB7300118EA7 /* Assets.xcassets */,
 				8DB7668D2C81DB7300118EA7 /* ContentView.swift */,
@@ -404,6 +406,7 @@
 				DEVELOPMENT_TEAM = 8253X8XK4Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ZipFinder/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -438,6 +441,7 @@
 				DEVELOPMENT_TEAM = 8253X8XK4Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ZipFinder/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -136,21 +136,27 @@
             }
             
             @Step {
-                Set up the Bundle Ruby environment for the CI runner temporarily.
+                Use Xcode Cloud's `CI_WORKFLOW` environment variable to determine the name of the workflow and, only if the name is `Release iOS`, then run the code. It is very important that you do this as the `ci_scripts` will run for every single workflow that you have.
                 
                 @Code(name: "ci_post_clone.sh", file: ci-post-clone-02.sh)
             }
             
             @Step {
-                Install all of the bundle dependencies.
+                Install `rbenv`, a Ruby version manager, using `Homebrew` and then initialise `rbenv` in the current shell.
                 
                 @Code(name: "ci_post_clone.sh", file: ci-post-clone-03.sh)
             }
             
             @Step {
-                Use Xcode Cloud's `CI_WORKFLOW` environment variable to determine the name of the workflow and, only if the name is `Release iOS`, then run the fastlane lane. It is very important that you do this as the `ci_scripts` will run for every single workflow that you have.
+                Install the desired version of Ruby and select it locally.
                 
                 @Code(name: "ci_post_clone.sh", file: ci-post-clone-04.sh)
+            }
+            
+            @Step {
+                Install all dependencies using `Bundle` and run the `Fastlane` lane.
+                
+                @Code(name: "ci_post_clone.sh", file: ci-post-clone-05.sh)
             }
         }
     }
