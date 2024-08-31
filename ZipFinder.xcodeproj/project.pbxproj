@@ -119,8 +119,6 @@
 				8D646F522C8394B800B39BA4 /* PBXTargetDependency */,
 			);
 			name = ZipFinderTests;
-			packageProductDependencies = (
-			);
 			productName = ZipFinderTests;
 			productReference = 8D646F4D2C8394B800B39BA4 /* ZipFinderTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -138,8 +136,6 @@
 			dependencies = (
 			);
 			name = ZipFinder;
-			packageProductDependencies = (
-			);
 			productName = ZipFinder;
 			productReference = 8D848D952C7F4A3D00E679BC /* ZipFinder: Zip Code Lookup.app */;
 			productType = "com.apple.product-type.application";
