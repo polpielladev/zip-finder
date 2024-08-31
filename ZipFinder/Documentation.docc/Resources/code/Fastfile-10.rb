@@ -1,7 +1,7 @@
 fastlane_require 'xcodeproj'
 
 def set_all_xcodeproj_version_numbers(version_number, platform)
-    project = Xcodeproj::Project.open('../QReate.xcodeproj')
+    project = Xcodeproj::Project.open('../ZipFinder.xcodeproj')
     targets = project.targets
     if platform == "ios"
       targets = targets.select { |target| target.name == "ZipFinder" }
@@ -29,15 +29,16 @@ lane :update_version_number_if_needed do
   platform = split_git_ref[1]
   set_all_xcodeproj_version_numbers(version_number, platform.downcase)
   
-  if git_status(path: "QReate.xcodeproj/project.pbxproj").empty?
+  if git_status(path: "ZipFinder.xcodeproj/project.pbxproj").empty?
     puts "🚀 Nothing to commit, pushing the same version again!"
   else
-    sh("git fetch origin main:main")
-    sh("git checkout main")
-
-    git_commit(path: "QReate.xcodeproj/project.pbxproj", message: "[🚀 release #{platform}] Updating version to: #{version_number}")
-
-    # Push with personal access token to enable permissions in Xcode Cloud
-    sh("git push https://polpielladev:#{ENV["GITHUB_TOKEN"]}@github.com/polpielladev/QRBuddy.git")
+    Dir.chdir("..") do
+      sh("echo #{version_number} >> .project-version")
+      sh("git add ZipFinder.xcodeproj/project.pbxproj .project-version")
+      sh("git commit -m '[🚀 release #{platform}] Updating version to: #{version_number}'")
+    
+      # Push with personal access token to enable permissions in Xcode Cloud
+      sh("git push https://polpielladev:#{ENV["GITHUB_TOKEN"]}@github.com/polpielladev/zip-finder.git")
+    end
   end
 end
