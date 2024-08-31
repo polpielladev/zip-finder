@@ -231,16 +231,30 @@
         }
     }
     
-    @Section(title: "BONUS - Adding What's New content") {
+    @Section(title: "Uploading Release Notes") {
         @ContentAndMedia {
-            Creating an Xcode Cloud workflow that gets triggered whenever a new commit is pushed to a branch with the `release/{platform}/{version}` format and distributes to App Store Connect users for External Testing
+            How to use Xcode Cloud to upload Release Notes for multiple locales
             
             @Image(source: "set-up-xcode-cloud-intro", alt: "")
         }
         
         @Steps {
             @Step {
-
+                Create a TestFlight directory where you will add all the localized release notes files.
+                
+                @Code(name: "Terminal.sh", file: whats-new-01.sh)
+            }
+            
+            @Step {
+                Create a new file for the `en-US` locale and add some content to it.
+                
+                @Code(name: "Terminal.sh", file: whats-new-02.sh)
+            }
+            
+            @Step {
+                Create a new file for the `es-ES` locale and add some content to it.
+                
+                @Code(name: "Terminal.sh", file: whats-new-03.sh)
             }
         }
     }
