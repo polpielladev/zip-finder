@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D646F582C8394BD00B39BA4 /* ZipFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D646F562C8394BD00B39BA4 /* ZipFinderTests.swift */; };
 		8DB766912C81DB7300118EA7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DB7668A2C81DB7300118EA7 /* Preview Assets.xcassets */; };
 		8DB766922C81DB7300118EA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DB7668C2C81DB7300118EA7 /* Assets.xcassets */; };
 		8DB766932C81DB7300118EA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB7668D2C81DB7300118EA7 /* ContentView.swift */; };
@@ -14,7 +15,20 @@
 		8DB766952C81DB7300118EA7 /* ZipFinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB7668F2C81DB7300118EA7 /* ZipFinderApp.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8D646F512C8394B800B39BA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8D848D8D2C7F4A3D00E679BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D848D942C7F4A3D00E679BC;
+			remoteInfo = ZipFinder;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		8D646F402C83943C00B39BA4 /* ZipFinder.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = ZipFinder.xctestplan; sourceTree = "<group>"; };
+		8D646F4D2C8394B800B39BA4 /* ZipFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZipFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D646F562C8394BD00B39BA4 /* ZipFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipFinderTests.swift; sourceTree = "<group>"; };
 		8D848D952C7F4A3D00E679BC /* ZipFinder: Zip Code Lookup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZipFinder: Zip Code Lookup.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DB7668A2C81DB7300118EA7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8DB7668C2C81DB7300118EA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -24,6 +38,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8D646F4A2C8394B800B39BA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D848D922C7F4A3D00E679BC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -34,10 +55,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D646F572C8394BD00B39BA4 /* ZipFinderTests */ = {
+			isa = PBXGroup;
+			children = (
+				8D646F562C8394BD00B39BA4 /* ZipFinderTests.swift */,
+			);
+			path = ZipFinderTests;
+			sourceTree = "<group>";
+		};
 		8D848D8C2C7F4A3D00E679BC = {
 			isa = PBXGroup;
 			children = (
+				8D646F402C83943C00B39BA4 /* ZipFinder.xctestplan */,
 				8DB766902C81DB7300118EA7 /* ZipFinder */,
+				8D646F572C8394BD00B39BA4 /* ZipFinderTests */,
 				8D848D962C7F4A3D00E679BC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				8D848D952C7F4A3D00E679BC /* ZipFinder: Zip Code Lookup.app */,
+				8D646F4D2C8394B800B39BA4 /* ZipFinderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,6 +105,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8D646F4C2C8394B800B39BA4 /* ZipFinderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D646F532C8394B800B39BA4 /* Build configuration list for PBXNativeTarget "ZipFinderTests" */;
+			buildPhases = (
+				8D646F492C8394B800B39BA4 /* Sources */,
+				8D646F4A2C8394B800B39BA4 /* Frameworks */,
+				8D646F4B2C8394B800B39BA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8D646F522C8394B800B39BA4 /* PBXTargetDependency */,
+			);
+			name = ZipFinderTests;
+			packageProductDependencies = (
+			);
+			productName = ZipFinderTests;
+			productReference = 8D646F4D2C8394B800B39BA4 /* ZipFinderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		8D848D942C7F4A3D00E679BC /* ZipFinder */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D848DA32C7F4A3E00E679BC /* Build configuration list for PBXNativeTarget "ZipFinder" */;
@@ -99,9 +151,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1510;
+				LastSwiftUpdateCheck = 1610;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
+					8D646F4C2C8394B800B39BA4 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 8D848D942C7F4A3D00E679BC;
+					};
 					8D848D942C7F4A3D00E679BC = {
 						CreatedOnToolsVersion = 15.1;
 					};
@@ -122,11 +178,19 @@
 			projectRoot = "";
 			targets = (
 				8D848D942C7F4A3D00E679BC /* ZipFinder */,
+				8D646F4C2C8394B800B39BA4 /* ZipFinderTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8D646F4B2C8394B800B39BA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D848D932C7F4A3D00E679BC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -139,6 +203,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8D646F492C8394B800B39BA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D646F582C8394BD00B39BA4 /* ZipFinderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D848D912C7F4A3D00E679BC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -151,7 +223,61 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		8D646F522C8394B800B39BA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D848D942C7F4A3D00E679BC /* ZipFinder */;
+			targetProxy = 8D646F512C8394B800B39BA4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		8D646F542C8394B800B39BA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8253X8XK4Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.polpiella.ZipFinderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZipFinder: Zip Code Lookup.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ZipFinder: Zip Code Lookup";
+			};
+			name = Debug;
+		};
+		8D646F552C8394B800B39BA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8253X8XK4Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.polpiella.ZipFinderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZipFinder: Zip Code Lookup.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ZipFinder: Zip Code Lookup";
+			};
+			name = Release;
+		};
 		8D848DA12C7F4A3E00E679BC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -342,6 +468,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8D646F532C8394B800B39BA4 /* Build configuration list for PBXNativeTarget "ZipFinderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D646F542C8394B800B39BA4 /* Debug */,
+				8D646F552C8394B800B39BA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8D848D902C7F4A3D00E679BC /* Build configuration list for PBXProject "ZipFinder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

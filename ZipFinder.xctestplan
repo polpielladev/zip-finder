@@ -1,0 +1,28 @@
+{
+  "configurations" : [
+    {
+      "id" : "0801A03A-67E3-4734-B300-DA5679859D66",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:ZipFinder.xcodeproj",
+      "identifier" : "8D848D942C7F4A3D00E679BC",
+      "name" : "ZipFinder"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:ZipFinder.xcodeproj",
+        "identifier" : "8D646F4C2C8394B800B39BA4",
+        "name" : "ZipFinderTests"
+      }
+    }
+  ],
+  "version" : 1
+}
