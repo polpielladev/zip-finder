@@ -35,6 +35,9 @@ lane :update_version_number_if_needed do
   if git_status(path: "ZipFinder.xcodeproj/project.pbxproj").empty?
     puts "🚀 Nothing to commit, pushing the same version again!"
   else
+    sh("echo $pwd")
+    sh("ls")
+
     sh("echo #{version_number} >> .project-version")
 
     sh("git add ZipFinder.xcodeproj/project.pbxproj .project-version")
