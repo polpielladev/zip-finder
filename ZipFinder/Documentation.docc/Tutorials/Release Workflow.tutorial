@@ -18,7 +18,13 @@
             }
             
             @Step {
-                Add the `fastlane` and `xcodeproj` Ruby gems as dependencies
+                Add `fastlane` and `xcodeproj` to the `Gemfile`.
+                
+                @Code(name: "Gemfile", file: Gemfile-01.rb)
+            }
+            
+            @Step {
+                Install all dependencies in the bundle.
                 
                 @Code(name: "Terminal.sh", file: set-up-env-02.sh)
             }

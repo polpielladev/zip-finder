@@ -1,7 +1,6 @@
 bundle init
 
-gem install fastlane
-gem install xcodeproj
+bundle install
 
 bundle exec fastlane init
 bundle exec fastlane add_plugin git_status
