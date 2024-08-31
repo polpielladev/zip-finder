@@ -39,9 +39,9 @@ lane :update_version_number_if_needed do
     sh("git fetch origin #{ENV["CI_BRANCH"]}:#{ENV["CI_BRANCH"]}")
     sh("git checkout #{ENV["CI_BRANCH"]}")
 
+    echo version_number >> ".project-version"
 
-    git_commit(path: "QReate.xcodeproj/project.pbxproj", message: "[🚀 release #{platform}] Updating version to: #{version_number}")
-
+    git_commit(path: ["QReate.xcodeproj/project.pbxproj", ".project-version"], message: "[🚀 release #{platform}] Updating version to: #{version_number}")
 
     # Push with personal access token to enable permissions in Xcode Cloud
     sh("git push https://polpielladev:#{ENV["GITHUB_TOKEN"]}@github.com/polpielladev/QRBuddy.git")
