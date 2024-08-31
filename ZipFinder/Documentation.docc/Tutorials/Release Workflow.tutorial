@@ -170,7 +170,63 @@
         
         @Steps {
             @Step {
+                First, start by navigating to the Report Navigator, tap on the Cloud tab, right-click on the product you want to add a workflow to and then click on 'Manage Workflows'.
                 
+                @Image(source: "manage-workflows.png", alt: "")
+            }
+            
+            @Step {
+                In the 'Manage Workflows' screen, tap on the '+' button at the bottom of the screen and select the product you are adding a new workflow to.
+                
+                @Image(source: "new-workflow.png", alt: "")
+            }
+            
+            @Step {
+                Set up the General section of the workflow with a name and description.
+                
+                As this workflow will submit a build for External Testing, you must tick the 'Restrict Editing' box and only allow Account Holders, Admins and App Managers to edit this workflow.
+                
+                @Image(source: "release-general.png", alt: "")
+            }
+            
+            @Step {
+                Set up the environment section with the Xcode and macOS version aliases you created and used in previous workflows.
+                
+                The workflow will be updating the project's version and pushing the changes to the release branch, so you will need to provide a GitHub token that has write rights to the repository. You can do so by adding a new environment variable and checking the 'secret' box.
+                
+                @Image(source: "release-environment.png", alt: "")
+            }
+            
+            @Step {
+                Modify the existing 'Branch Changes' action and set the workflow to only be triggered on pushes to branches matching the `release/iOS/*` pattern.
+                
+                To avoid multiple duplicate pushes, set a custom condition to not start the workflow if a file matching `.project-version`, which is pushed together with the version bump in the Fastlane lane, is modified and tick the box to 'Auto-cancel builds'.
+                
+                @Image(source: "release-branch-changes.png", alt: "")
+            }
+            
+            @Step {
+                Add an action to archive the application.
+                
+                @Image(source: "release-add-action-archive.png", alt: "")
+            }
+            
+            @Step {
+                Set up the archive action with the scheme you want to generate an artifact for and select the 'App Store Connect' distribution preparation option.
+                
+                @Image(source: "release-archive.png", alt: "")
+            }
+            
+            @Step {
+                Add a post-action to release the artifact for external testing.
+                
+                @Image(source: "release-add-action-external-testing.png", alt: "")
+            }
+            
+            @Step {
+                Select the artifact from the previous step, select a group to submit the build to and click 'Save'.
+                
+                @Image(source: "release-external-testing.png", alt: "")
             }
         }
     }
