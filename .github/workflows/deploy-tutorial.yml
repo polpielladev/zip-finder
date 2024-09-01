@@ -32,7 +32,7 @@ jobs:
       - name: Export static path
         run: |
             xcrun docc process-archive transform-for-static-hosting \
-                "$PWD/.derivedData/Build/Products/Debug-iphonesimulator/GivenWithLove.doccarchive" \
+                "$PWD/.derivedData/Build/Products/Debug-iphonesimulator/ZipFinder.doccarchive" \
                 --output-path ".docs" \
                 --hosting-base-path "zip-finder"
       - name: Redirect to tutorials
@@ -43,7 +43,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: 'docs/'
+          path: '.docs/'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
