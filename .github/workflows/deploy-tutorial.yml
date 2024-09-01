@@ -31,7 +31,7 @@ jobs:
                 -derivedDataPath "$PWD/.derivedData"
       - name: Export static path
         run: |
-            mv '$PWD/.derivedData/Build/Products/Debug-iphonesimulator/ZipFinder: Zip Code Lookup.doccarchive' '$PWD/.derivedData/Build/Products/Debug-iphonesimulator/ZipFinder.doccarchive'
+            mv '.derivedData/Build/Products/Debug-iphonesimulator/ZipFinder: Zip Code Lookup.doccarchive' '.derivedData/Build/Products/Debug-iphonesimulator/ZipFinder.doccarchive'
             xcrun docc process-archive transform-for-static-hosting \
                 "$PWD/.derivedData/Build/Products/Debug-iphonesimulator/ZipFinder.doccarchive" \
                 --output-path ".docs" \
