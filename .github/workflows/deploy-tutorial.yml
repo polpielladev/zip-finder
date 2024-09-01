@@ -1,0 +1,49 @@
+name: Build and Deploy DocC tutorial to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Build DocC
+        run: |
+            xcrun xcodebuild docbuild \
+                -scheme ZipFinder \
+                -destination 'generic/platform=iOS Simulator' \
+                -derivedDataPath "$PWD/.derivedData"
+      - name: Export static path
+        run: |
+            xcrun docc process-archive transform-for-static-hosting \
+                "$PWD/.derivedData/Build/Products/Debug-iphonesimulator/GivenWithLove.doccarchive" \
+                --output-path ".docs" \
+                --hosting-base-path "zip-finder"
+      - name: Redirect to tutorials
+        run: echo '<script>window.location.href += "/tutorials/xcodecloud"</script>' > .docs/index.html
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload entire repository
+          path: 'docs/'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
