@@ -1,6 +1,8 @@
 @Tutorial(time: 20) {
     @Intro(title: "Workflow: Nightly Build") {
         Archive, test, analyze and submit your app for internal testing at midnight every night from the main branch.
+        
+        @Image(source: "nightly-header.png", alt: "")
     }
     
     @Section(title: "Creating the workflow") {

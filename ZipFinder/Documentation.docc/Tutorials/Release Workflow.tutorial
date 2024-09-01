@@ -1,6 +1,8 @@
 @Tutorial(time: 20) {
     @Intro(title: "Workflow: Distributing the app") {
-        Archive and distribute the app for external testing whenever a commit is pushed to a branch with the pattern `release/{platform}/{version}`. The workflow should automatically bump the version of the app based on the branch name, auto-translate the content and then submitting for external testing. 
+        Archive and distribute the app for external testing whenever a commit is pushed to a branch with the pattern `release/{platform}/{version}`. The workflow should automatically bump the version of the app based on the branch name, auto-translate the content and then submitting for external testing.
+        
+        @Image(source: "header.png", alt: "")
     }
     
     @Section(title: "Creating the `bump_version` lane in fastlane") {
