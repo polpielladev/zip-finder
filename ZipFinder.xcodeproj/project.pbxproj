@@ -27,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		8D1E3DDD2C83C868006579C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D516B1A2C86191300B3854F /* ci_post_clone.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_post_clone.sh; sourceTree = "<group>"; };
 		8D646F402C83943C00B39BA4 /* ZipFinder.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = ZipFinder.xctestplan; sourceTree = "<group>"; };
 		8D646F4D2C8394B800B39BA4 /* ZipFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZipFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D646F562C8394BD00B39BA4 /* ZipFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipFinderTests.swift; sourceTree = "<group>"; };
@@ -56,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D516B1B2C86191300B3854F /* ci_scripts */ = {
+			isa = PBXGroup;
+			children = (
+				8D516B1A2C86191300B3854F /* ci_post_clone.sh */,
+			);
+			path = ci_scripts;
+			sourceTree = "<group>";
+		};
 		8D646F572C8394BD00B39BA4 /* ZipFinderTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +76,7 @@
 		8D848D8C2C7F4A3D00E679BC = {
 			isa = PBXGroup;
 			children = (
+				8D516B1B2C86191300B3854F /* ci_scripts */,
 				8D646F402C83943C00B39BA4 /* ZipFinder.xctestplan */,
 				8DB766902C81DB7300118EA7 /* ZipFinder */,
 				8D646F572C8394BD00B39BA4 /* ZipFinderTests */,
