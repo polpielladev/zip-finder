@@ -1,6 +1,8 @@
 @Tutorial(time: 10) {
     @Intro(title: "How to Set Up Xcode Cloud") {
         This tutorial guides you through setting up the ZipFinder with Xcode Cloud and will guide you through the whole onboarding process to get you set up and ready to start automating your build distribution process!
+        
+        @Image(source: "setup-header.png")
     }
     
     @Section(title: "Setting up Xcode Cloud") {
