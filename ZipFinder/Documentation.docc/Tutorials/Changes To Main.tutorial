@@ -1,4 +1,4 @@
-@Tutorial(time: 20) {
+@Tutorial(time: 40) {
     @Intro(title: "Workflow: Changes to Main") {
         Build and test an application every single time that a commit is pushed to the main branch of the repository or every time a commit is pushed to a Pull Request that targets the main branch.
         
