@@ -111,12 +111,28 @@ lane :generate_profiles_and_certificates do
     sync_code_signing(
         type: "appstore",
         app_identifier: ["dev.polpiella.ZipFinder"],
-        readonly: false
+        readonly: false,
+        platform: "macos"
     )
 
     sync_code_signing(
         type: "development",
         app_identifier: ["dev.polpiella.ZipFinder"],
-        readonly: false
+        readonly: false,
+        platform: "macos"
     )
+
+    sync_code_signing(
+      type: "appstore",
+      app_identifier: ["dev.polpiella.ZipFinder"],
+      readonly: false,
+      platform: "ios"
+  )
+
+  sync_code_signing(
+      type: "development",
+      app_identifier: ["dev.polpiella.ZipFinder"],
+      readonly: false,
+      platform: "ios"
+  )
 end

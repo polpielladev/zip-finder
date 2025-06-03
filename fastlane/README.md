@@ -13,13 +13,13 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 # Available Actions
 
-### update_version_and_build_number_if_needed
+### release_from_branch
 
 ```sh
-[bundle exec] fastlane update_version_and_build_number_if_needed
+[bundle exec] fastlane release_from_branch
 ```
 
-Updates the app's `MARKETING_VERSION` based on the branch name if needed.
+Run release for the platform specified in the branch name
 
 ### generate_profiles_and_certificates
 
@@ -28,19 +28,6 @@ Updates the app's `MARKETING_VERSION` based on the branch name if needed.
 ```
 
 Generate profiles and certificates
-
-----
-
-
-## iOS
-
-### ios release
-
-```sh
-[bundle exec] fastlane ios release
-```
-
-Push a new release build to the App Store
 
 ----
 
