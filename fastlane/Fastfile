@@ -10,6 +10,8 @@ def parse_release_branch(branch_name = ENV["CI_BRANCH"])
 
   platform = split_git_ref[1].downcase
   version_number = split_git_ref.last
+
+  puts "🚀 Parsed release branch: #{platform} #{version_number}"
   
   { platform: platform, version: version_number }
 end
