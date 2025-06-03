@@ -63,7 +63,8 @@ def release(options)
     type: "appstore",
     app_identifier: ["dev.polpiella.ZipFinder"],
     readonly: true,
-    platform: platform
+    platform: platform,
+    additional_cert_types: platform == "macos" ? ["mac_installer_distribution"] : [],
   )
 
   xcodes(version: "16.3", select_for_current_build_only: true)
