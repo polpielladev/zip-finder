@@ -51,6 +51,8 @@ def release(options)
   asc_issuer_id = ENV["APP_STORE_CONNECT_ISSUER_ID"]
   asc_key_id = ENV["APP_STORE_CONNECT_API_KEY_ID"]
 
+
+  puts "🚀 Setting up App Store Connect API key"
   app_store_connect_api_key(
 	  key_id: asc_key_id,
 	  issuer_id: asc_issuer_id,
