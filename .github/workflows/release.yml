@@ -21,6 +21,11 @@ on:
         default: "1.0.0"
         type: string
 
+permissions:
+  contents: write
+  pull-requests: write
+  actions: read
+
 env:
   DEVELOPER_DIR: /Applications/Xcode.app/Contents/Developer
 
