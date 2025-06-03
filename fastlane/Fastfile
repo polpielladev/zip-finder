@@ -40,7 +40,10 @@ def set_all_xcodeproj_version_and_build_numbers(version_number, platform)
 end
 
 # Common release logic that can be used by any platform
-def release(platform, version)
+def release(options)
+  platform = options[:platform]
+  version = options[:version]
+  
   setup_ci
 
   asc_key_content = ENV["APP_STORE_CONNECT_API_KEY_CONTENT"]
@@ -75,8 +78,7 @@ def release(platform, version)
   upload_to_app_store
 end
 
-desc "Updates the app's `MARKETING_VERSION` based on the branch name if needed."
-lane :update_version_and_build_number_if_needed do |options|
+def update_version_and_build_number_if_needed(options)
   set_all_xcodeproj_version_and_build_numbers(options[:version], options[:platform])
   
   if git_status(path: "ZipFinder.xcodeproj/project.pbxproj").empty?
@@ -84,7 +86,7 @@ lane :update_version_and_build_number_if_needed do |options|
   else
     Dir.chdir("..") do
       sh("git add ZipFinder.xcodeproj/project.pbxproj")
-      sh("git commit -m '[ci skip] [🚀 release #{platform}] Updating version to: #{version}'")
+      sh("git commit -m '[ci skip] [🚀 release #{options[:platform]}] Updating version to: #{options[:version]}'")
     
       # Push with personal access token to enable permissions in Xcode Cloud
       sh("git push https://polpielladev:#{ENV["GITHUB_TOKEN"]}@github.com/polpielladev/zip-finder.git")
