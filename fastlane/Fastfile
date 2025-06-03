@@ -90,7 +90,7 @@ def release(options)
   end
 
   build_app(scheme: scheme_name)
-  upload_to_app_store
+  upload_to_app_store(force: true)
 end
 
 def update_version_and_build_number_if_needed(options)
