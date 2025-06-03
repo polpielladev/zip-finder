@@ -78,7 +78,7 @@ def release(options)
   end
 
   build_app(scheme: scheme_name)
-  upload_to_app_store(force: true)
+  upload_to_app_store(force: true, precheck_include_in_app_purchases: false)
 end
 
 def update_version_and_build_number_if_needed(options)
