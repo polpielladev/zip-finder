@@ -32,7 +32,7 @@ concurrency:
 
 jobs:
   release:
-    runs-on: macOS-15
+    runs-on: ghcr.io/cirruslabs/macos-runner:sequoia
     steps:
       - uses: actions/checkout@v4
       - uses: ruby/setup-ruby@v1
