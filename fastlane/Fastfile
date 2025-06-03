@@ -44,6 +44,7 @@ def release(options)
   platform = options[:platform]
   version = options[:version]
   
+  puts "🚀 Starting release for #{platform} #{version}"
   setup_ci
 
   asc_key_content = ENV["APP_STORE_CONNECT_API_KEY_CONTENT"]
