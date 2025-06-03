@@ -76,6 +76,8 @@ def release(options)
     platform: platform
   )
 
+  xcodes(version: "16.3", select_for_current_build_only: true)
+
   update_version_and_build_number_if_needed(platform: platform, version: version)
 
   scheme_name = case platform
