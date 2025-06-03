@@ -115,7 +115,8 @@ lane :generate_profiles_and_certificates do
         type: "appstore",
         app_identifier: ["dev.polpiella.ZipFinder"],
         readonly: false,
-        platform: "macos"
+        platform: "macos",
+        additional_cert_types: ["mac_installer_distribution"]
     )
 
     sync_code_signing(
