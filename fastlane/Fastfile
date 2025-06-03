@@ -25,7 +25,7 @@ def set_all_xcodeproj_version_and_build_numbers(version_number, platform)
 end
 
 desc "Updates the app's `MARKETING_VERSION` based on the branch name if needed."
-lane :update_version_number_if_needed do
+lane :update_version_and_build_number_if_needed do
   split_git_ref = ENV["CI_BRANCH"].split("/", -1)
   
   if split_git_ref.length != 3
@@ -76,25 +76,6 @@ platform :ios do
       readonly: true
   )
 
-    increment_build_number(xcodeproj: "ZipFinder.xcodeproj")
-    build_app(scheme: "ZipFinder")
-    upload_to_app_store
-  end
-end
-
-platform :macos do
-  desc "Push a new release build to the App Store"
-  lane :release do
-    setup_ci
-
-    sync_code_signing(
-      type: "appstore",
-      app_identifier: ["dev.polpiella.ZipFinder"],
-      readonly: true
-  )
-
-    increment_build_number(xcodeproj: "ZipFinderForMacOS.xcodeproj")
-    build_app(scheme: "ZipFinder")
-    upload_to_app_store
+  update_version_and_build_number_if_needed
   end
 end

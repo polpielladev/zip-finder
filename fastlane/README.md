@@ -13,6 +13,14 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 # Available Actions
 
+### update_version_and_build_number_if_needed
+
+```sh
+[bundle exec] fastlane update_version_and_build_number_if_needed
+```
+
+Updates the app's `MARKETING_VERSION` based on the branch name if needed.
+
 ### generate_profiles_and_certificates
 
 ```sh
