@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 63;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -30,6 +30,7 @@
 		8D646F402C83943C00B39BA4 /* ZipFinder.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = ZipFinder.xctestplan; sourceTree = "<group>"; };
 		8D646F4D2C8394B800B39BA4 /* ZipFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZipFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D646F562C8394BD00B39BA4 /* ZipFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipFinderTests.swift; sourceTree = "<group>"; };
+		8D8047882DEF50D700F927A8 /* ZipFinderForMacOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZipFinderForMacOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D848D952C7F4A3D00E679BC /* ZipFinder: Zip Code Lookup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZipFinder: Zip Code Lookup.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DB7668A2C81DB7300118EA7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8DB7668C2C81DB7300118EA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,8 +39,19 @@
 		8DB7668F2C81DB7300118EA7 /* ZipFinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipFinderApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		8D8047892DEF50D700F927A8 /* ZipFinderForMacOS */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ZipFinderForMacOS; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		8D646F4A2C8394B800B39BA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D8047852DEF50D700F927A8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -70,6 +82,7 @@
 				8D646F402C83943C00B39BA4 /* ZipFinder.xctestplan */,
 				8DB766902C81DB7300118EA7 /* ZipFinder */,
 				8D646F572C8394BD00B39BA4 /* ZipFinderTests */,
+				8D8047892DEF50D700F927A8 /* ZipFinderForMacOS */,
 				8D848D962C7F4A3D00E679BC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,6 +92,7 @@
 			children = (
 				8D848D952C7F4A3D00E679BC /* ZipFinder: Zip Code Lookup.app */,
 				8D646F4D2C8394B800B39BA4 /* ZipFinderTests.xctest */,
+				8D8047882DEF50D700F927A8 /* ZipFinderForMacOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,6 +139,28 @@
 			productReference = 8D646F4D2C8394B800B39BA4 /* ZipFinderTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		8D8047872DEF50D700F927A8 /* ZipFinderForMacOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D8047932DEF50D800F927A8 /* Build configuration list for PBXNativeTarget "ZipFinderForMacOS" */;
+			buildPhases = (
+				8D8047842DEF50D700F927A8 /* Sources */,
+				8D8047852DEF50D700F927A8 /* Frameworks */,
+				8D8047862DEF50D700F927A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				8D8047892DEF50D700F927A8 /* ZipFinderForMacOS */,
+			);
+			name = ZipFinderForMacOS;
+			packageProductDependencies = (
+			);
+			productName = ZipFinderForMacOS;
+			productReference = 8D8047882DEF50D700F927A8 /* ZipFinderForMacOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 		8D848D942C7F4A3D00E679BC /* ZipFinder */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D848DA32C7F4A3E00E679BC /* Build configuration list for PBXNativeTarget "ZipFinder" */;
@@ -149,12 +185,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1610;
+				LastSwiftUpdateCheck = 1630;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					8D646F4C2C8394B800B39BA4 = {
 						CreatedOnToolsVersion = 16.1;
 						TestTargetID = 8D848D942C7F4A3D00E679BC;
+					};
+					8D8047872DEF50D700F927A8 = {
+						CreatedOnToolsVersion = 16.3;
 					};
 					8D848D942C7F4A3D00E679BC = {
 						CreatedOnToolsVersion = 15.1;
@@ -177,12 +216,20 @@
 			targets = (
 				8D848D942C7F4A3D00E679BC /* ZipFinder */,
 				8D646F4C2C8394B800B39BA4 /* ZipFinderTests */,
+				8D8047872DEF50D700F927A8 /* ZipFinderForMacOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8D646F4B2C8394B800B39BA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D8047862DEF50D700F927A8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -206,6 +253,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D646F582C8394BD00B39BA4 /* ZipFinderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D8047842DEF50D700F927A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +327,64 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZipFinder: Zip Code Lookup.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ZipFinder: Zip Code Lookup";
+			};
+			name = Release;
+		};
+		8D8047912DEF50D800F927A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ZipFinderForMacOS/ZipFinderForMacOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WSJXBQB984;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.polpiella.ZipFinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8D8047922DEF50D800F927A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ZipFinderForMacOS/ZipFinderForMacOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WSJXBQB984;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.polpiella.ZipFinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -473,6 +585,15 @@
 			buildConfigurations = (
 				8D646F542C8394B800B39BA4 /* Debug */,
 				8D646F552C8394B800B39BA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D8047932DEF50D800F927A8 /* Build configuration list for PBXNativeTarget "ZipFinderForMacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D8047912DEF50D800F927A8 /* Debug */,
+				8D8047922DEF50D800F927A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
