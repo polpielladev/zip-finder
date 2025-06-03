@@ -28,7 +28,7 @@ permissions:
 
 jobs:
   release:
-    runs-on: macos-latest
+    runs-on: macOS-15-arm64
     steps:
       - uses: actions/checkout@v4
       - uses: ruby/setup-ruby@v1
