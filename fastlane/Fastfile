@@ -51,6 +51,16 @@ def release(options)
   asc_issuer_id = ENV["APP_STORE_CONNECT_ISSUER_ID"]
   asc_key_id = ENV["APP_STORE_CONNECT_API_KEY_ID"]
 
+  # Debug: Check if any of the required values are missing
+  puts "🔍 Checking App Store Connect API key values:"
+  puts "  - Key ID: #{asc_key_id.nil? || asc_key_id.empty? ? '❌ MISSING/EMPTY' : '✅ Present'}"
+  puts "  - Issuer ID: #{asc_issuer_id.nil? || asc_issuer_id.empty? ? '❌ MISSING/EMPTY' : '✅ Present'}"
+  puts "  - Key Content: #{asc_key_content.nil? || asc_key_content.empty? ? '❌ MISSING/EMPTY' : '✅ Present'}"
+  
+  if asc_key_content
+    puts "  - Key Content length: #{asc_key_content.length} characters"
+    puts "  - Key Content starts with: #{asc_key_content[0..50]}..."
+  end
 
   puts "🚀 Setting up App Store Connect API key"
   app_store_connect_api_key(
