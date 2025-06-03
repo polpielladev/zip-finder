@@ -40,7 +40,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		8D8047892DEF50D700F927A8 /* ZipFinderForMacOS */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ZipFinderForMacOS; sourceTree = "<group>"; };
+		8D8047892DEF50D700F927A8 /* ZipFinderForMacOS */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
+			explicitFileTypes = {
+			};
+			explicitFolders = (
+			);
+			path = ZipFinderForMacOS;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,8 +165,6 @@
 				8D8047892DEF50D700F927A8 /* ZipFinderForMacOS */,
 			);
 			name = ZipFinderForMacOS;
-			packageProductDependencies = (
-			);
 			productName = ZipFinderForMacOS;
 			productReference = 8D8047882DEF50D700F927A8 /* ZipFinderForMacOS.app */;
 			productType = "com.apple.product-type.application";
@@ -513,7 +521,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"ZipFinder/Preview Content\"";
 				DEVELOPMENT_TEAM = 8253X8XK4Z;
 				ENABLE_PREVIEWS = YES;
@@ -529,7 +537,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.polpiella.ZipFinder;
 				PRODUCT_NAME = "$(TARGET_NAME): Zip Code Lookup";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -548,7 +556,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"ZipFinder/Preview Content\"";
 				DEVELOPMENT_TEAM = 8253X8XK4Z;
 				ENABLE_PREVIEWS = YES;
@@ -564,7 +572,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.polpiella.ZipFinder;
 				PRODUCT_NAME = "$(TARGET_NAME): Zip Code Lookup";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
