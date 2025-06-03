@@ -94,7 +94,6 @@ def update_version_and_build_number_if_needed(options)
       sh("git add ZipFinder.xcodeproj/project.pbxproj")
       sh("git commit -m '[ci skip] [🚀 release #{options[:platform]}] Updating version to: #{options[:version]}'")
     
-      # Push with personal access token to enable permissions in Xcode Cloud
       sh("git push https://polpielladev:#{ENV["GITHUB_TOKEN"]}@github.com/polpielladev/zip-finder.git")
     end
   end
