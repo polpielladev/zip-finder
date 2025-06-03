@@ -19,16 +19,19 @@ end
 
 def set_all_xcodeproj_version_and_build_numbers(version_number, platform)
     project = Xcodeproj::Project.open('../ZipFinder.xcodeproj')
+    testflight_platform_name = ""
     targets = project.targets
     if platform == "ios"
+      testflight_platform_name = "ios"
       targets = targets.select { |target| target.name == "ZipFinder" }
     elsif platform == "macos"
+      testflight_platform_name = "osx"
       targets = targets.select { |target| target.name == "ZipFinderForMacOS" }
     else
       UI.user_error!("Invalid platform: #{platform}, allowed values are: ios, macos")
     end
-    
-    build_number = latest_testflight_build_number(platform: platform) + 1
+
+    build_number = latest_testflight_build_number(platform: testflight_platform_name) + 1
 
     targets.each do |target|
       target.build_configurations.each do |config|
