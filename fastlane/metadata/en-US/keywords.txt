@@ -1,1 +1,0 @@
-zip code,postal code,location,address,city,state,lookup,search,geography,mail,shipping

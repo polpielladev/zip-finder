@@ -1,5 +1,0 @@
-app_identifier("dev.polpiella.ZipFinder") # The bundle identifier of your app
-apple_id("pol@appdiggershq.com") # Your Apple Developer Portal username
-
-itc_team_id("123663897") # App Store Connect Team ID
-team_id("8253X8XK4Z") # Developer Portal Team ID
