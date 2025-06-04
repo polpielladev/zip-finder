@@ -1,2 +1,3 @@
 .derivedData
 .DS_Store
+fastlane/report.xml
