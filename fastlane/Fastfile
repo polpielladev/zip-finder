@@ -1,0 +1,31 @@
+desc "Generate profiles and certificates"
+lane :generate_profiles_and_certificates do
+    sync_code_signing(
+        type: "appstore",
+        app_identifier: ["dev.polpiella.ZipFinder"],
+        readonly: false,
+        platform: "macos",
+        additional_cert_types: ["mac_installer_distribution"]
+    )
+
+    sync_code_signing(
+        type: "development",
+        app_identifier: ["dev.polpiella.ZipFinder"],
+        readonly: false,
+        platform: "macos"
+    )
+
+    sync_code_signing(
+      type: "appstore",
+      app_identifier: ["dev.polpiella.ZipFinder"],
+      readonly: false,
+      platform: "ios"
+  )
+
+  sync_code_signing(
+      type: "development",
+      app_identifier: ["dev.polpiella.ZipFinder"],
+      readonly: false,
+      platform: "ios"
+  )
+end
